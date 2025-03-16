@@ -1,0 +1,264 @@
+<!-- Donate Hero Section -->
+<section class="donate-hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-50">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                <h1 class="hero-title">Soutenez notre initiative</h1>
+                <p class="hero-subtitle">Votre don aide à former les jeunes Haïtiens aux métiers du numérique et à créer un avenir meilleur</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Donation Form Section -->
+<section class="donation-form-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="donation-info">
+                    <h2 class="section-title">Pourquoi faire un don ?</h2>
+                    <p class="section-text">Votre contribution permet de :</p>
+                    <ul class="donation-benefits">
+                        <li><i class="fas fa-graduation-cap"></i> <strong>Former des jeunes</strong> aux métiers du numérique</li>
+                        <li><i class="fas fa-laptop"></i> <strong>Fournir du matériel</strong> informatique et des ressources pédagogiques</li>
+                        <li><i class="fas fa-building"></i> <strong>Créer des espaces</strong> d'apprentissage sécurisés</li>
+                        <li><i class="fas fa-users"></i> <strong>Financer des mentors</strong> pour accompagner les jeunes</li>
+                        <li><i class="fas fa-handshake"></i> <strong>Développer des partenariats</strong> avec des entreprises locales et internationales</li>
+                    </ul>
+                    
+                    <div class="impact-stats mt-5">
+                        <h3 class="impact-title">Votre impact</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="impact-item">
+                                    <div class="impact-icon">
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </div>
+                                    <h4>50$</h4>
+                                    <p>Finance une semaine de formation pour un jeune</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="impact-item">
+                                    <div class="impact-icon">
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </div>
+                                    <h4>100$</h4>
+                                    <p>Fournit un ordinateur reconditionné</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="impact-item">
+                                    <div class="impact-icon">
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </div>
+                                    <h4>500$</h4>
+                                    <p>Finance un programme complet pour un jeune</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="donation-form-container">
+                    <div class="donation-form-header">
+                        <h3>Faire un don</h3>
+                        <p>Tous les dons sont sécurisés via TikesPam</p>
+                    </div>
+                    <form action="/process-donation" method="POST" class="donation-form" id="donationForm">
+                        <div class="donation-amount-options">
+                            <h4>Choisissez un montant</h4>
+                            <div class="amount-buttons">
+                                <button type="button" class="amount-btn" data-amount="50">50$</button>
+                                <button type="button" class="amount-btn" data-amount="100">100$</button>
+                                <button type="button" class="amount-btn" data-amount="200">200$</button>
+                                <button type="button" class="amount-btn" data-amount="500">500$</button>
+                                <button type="button" class="amount-btn custom-amount">Autre</button>
+                            </div>
+                            <div class="custom-amount-input mt-3" style="display: none;">
+                                <input type="number" class="form-control" id="customAmount" name="customAmount" placeholder="Entrez un montant personnalisé">
+                            </div>
+                            <!-- Champ caché pour stocker le montant sélectionné -->
+                            <input type="hidden" id="amount" name="amount" value="50">
+                        </div>
+                        
+                        <div class="donation-frequency mt-4">
+                            <h4>Fréquence du don</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="donationFrequency" id="oneTime" value="oneTime" checked>
+                                <label class="form-check-label" for="oneTime">
+                                    Don unique
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="donationFrequency" id="monthly" value="monthly">
+                                <label class="form-check-label" for="monthly">
+                                    Don mensuel
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Informations personnelles -->
+                        <div class="personal-info mt-4">
+                            <h4>Vos informations</h4>
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Nom complet</label>
+                                <input type="text" class="form-control" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Téléphone</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="donation-submit mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Procéder au paiement</button>
+                        </div>
+                        
+                        <div class="donation-security mt-4 text-center">
+                            <p><i class="fas fa-lock"></i> Paiement 100% sécurisé via TikesPam</p>
+                            <div class="payment-methods">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-paypal"></i>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="donor-testimonials-section py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                <h2 class="section-title">Ce que disent nos donateurs</h2>
+                <p class="section-subtitle">Rejoignez notre communauté de soutien</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="donor-testimonial-card">
+                    <div class="donor-testimonial-content">
+                        <p>"Soutenir Famous Tech est l'un des meilleurs investissements que j'ai faits. Voir l'impact direct sur la vie des jeunes est incroyablement gratifiant."</p>
+                    </div>
+                    <div class="donor-info">
+                        <h4>Marc Dubois</h4>
+                        <p>Donateur depuis 2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="donor-testimonial-card">
+                    <div class="donor-testimonial-content">
+                        <p>"J'ai visité le centre de formation de Famous Tech à Port-au-Prince et j'ai été impressionné par le professionnalisme et la passion des formateurs."</p>
+                    </div>
+                    <div class="donor-info">
+                        <h4>Sophie Martin</h4>
+                        <p>Donatrice mensuelle</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="donor-testimonial-card">
+                    <div class="donor-testimonial-content">
+                        <p>"En tant qu'entreprise, nous soutenons Famous Tech car nous croyons en leur mission et en leur capacité à former les talents de demain."</p>
+                    </div>
+                    <div class="donor-info">
+                        <h4>TechGlobal Inc.</h4>
+                        <p>Partenaire corporatif</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="cta-card" data-aos="zoom-in">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h2 class="cta-title">Chaque don compte, peu importe le montant</h2>
+                            <p class="cta-text">Ensemble, nous pouvons offrir un avenir meilleur aux jeunes Haïtiens et contribuer à un changement positif dans la société.</p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                            <a href="#" class="btn btn-light btn-lg scroll-to-form">Faire un don maintenant</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Gestion des boutons de montant
+        const amountButtons = document.querySelectorAll('.amount-btn');
+        const customAmountInput = document.querySelector('.custom-amount-input');
+        const amountInput = document.getElementById('amount');
+        
+        amountButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Retirer la classe active de tous les boutons
+                amountButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Ajouter la classe active au bouton cliqué
+                this.classList.add('active');
+                
+                // Mettre à jour le champ caché avec le montant sélectionné
+                if (this.classList.contains('custom-amount')) {
+                    customAmountInput.style.display = 'block';
+                    // Le montant sera mis à jour lors de la soumission du formulaire
+                } else {
+                    customAmountInput.style.display = 'none';
+                    amountInput.value = this.getAttribute('data-amount');
+                }
+            });
+        });
+        
+        // Validation du formulaire
+        const donationForm = document.getElementById('donationForm');
+        donationForm.addEventListener('submit', function(e) {
+            const customAmountField = document.getElementById('customAmount');
+            const customAmountActive = document.querySelector('.amount-btn.custom-amount.active');
+            
+            // Si le montant personnalisé est actif mais vide
+            if (customAmountActive && (!customAmountField.value || customAmountField.value <= 0)) {
+                e.preventDefault();
+                alert('Veuillez entrer un montant valide.');
+                customAmountField.focus();
+                return false;
+            }
+            
+            // Si le montant personnalisé est actif, mettre à jour le champ caché
+            if (customAmountActive) {
+                amountInput.value = customAmountField.value;
+            }
+            
+            return true;
+        });
+        
+        // Scroll vers le formulaire de don
+        const scrollToFormBtn = document.querySelector('.scroll-to-form');
+        if (scrollToFormBtn) {
+            scrollToFormBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const formContainer = document.querySelector('.donation-form-container');
+                formContainer.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+    });
+</script> 

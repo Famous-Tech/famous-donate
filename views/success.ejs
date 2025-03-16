@@ -1,0 +1,91 @@
+<!-- Success Section -->
+<section class="success-section min-vh-100 d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="success-card text-center" data-aos="zoom-in">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h1 class="success-title">Merci pour votre don !</h1>
+                    <p class="success-message">Votre contribution va directement aider les jeunes Haïtiens à se former aux métiers du numérique et à construire un avenir meilleur.</p>
+                    
+                    <div class="impact-message mt-4">
+                        <h3>Votre impact</h3>
+                        <p>Grâce à votre générosité, nous pouvons continuer à offrir des formations de qualité, fournir du matériel informatique et créer des opportunités pour les jeunes.</p>
+                    </div>
+                    
+                    <div class="share-section mt-5">
+                        <h4>Partagez notre mission</h4>
+                        <p>Aidez-nous à étendre notre impact en partageant notre initiative avec votre réseau.</p>
+                        <div class="social-share-buttons mt-3">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://famoustech.vercel.app" target="_blank" class="btn btn-facebook">
+                                <i class="fab fa-facebook-f"></i> Partager
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?text=Je%20viens%20de%20soutenir%20Famous%20Tech%20pour%20aider%20les%20jeunes%20Haïtiens%20à%20choisir%20le%20développement%20web%20plutôt%20que%20le%20banditisme.%20Rejoignez-moi%20!&url=https://famoustech.vercel.app" target="_blank" class="btn btn-twitter">
+                                <i class="fab fa-twitter"></i> Tweeter
+                            </a>
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://famoustech.vercel.app&title=Famous%20Tech%20-%20Une%20alternative%20au%20banditisme&summary=Je%20viens%20de%20soutenir%20Famous%20Tech%20pour%20aider%20les%20jeunes%20Haïtiens%20à%20choisir%20le%20développement%20web%20plutôt%20que%20le%20banditisme." target="_blank" class="btn btn-linkedin">
+                                <i class="fab fa-linkedin-in"></i> Partager
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="next-steps mt-5">
+                        <h4>Et maintenant ?</h4>
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <div class="next-step-item">
+                                    <div class="next-step-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <h5>Restez informé</h5>
+                                    <p>Vous recevrez bientôt un email avec plus d'informations sur notre initiative.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="next-step-item">
+                                    <div class="next-step-icon">
+                                        <i class="fas fa-certificate"></i>
+                                    </div>
+                                    <h5>Certificat de don</h5>
+                                    <p>Un certificat de don vous sera envoyé pour vos archives.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="next-step-item">
+                                    <div class="next-step-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <h5>Suivez notre impact</h5>
+                                    <p>Nous vous tiendrons informé de l'impact de votre contribution.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons mt-5">
+                        <a href="/" class="btn btn-primary btn-lg me-3">Retour à l'accueil</a>
+                        <a href="https://famoustech.vercel.app" target="_blank" class="btn btn-outline-primary btn-lg">Découvrir nos services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Animation de confettis pour célébrer le don
+        const successCard = document.querySelector('.success-card');
+        
+        // Afficher une notification de remerciement
+        Swal.fire({
+            title: 'Merci !',
+            text: 'Votre don a été reçu avec succès.',
+            icon: 'success',
+            confirmButtonText: 'Continuer',
+            confirmButtonColor: '#4CAF50'
+        });
+    });
+</script> 

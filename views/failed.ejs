@@ -1,0 +1,92 @@
+<!-- Failed Payment Section -->
+<section class="failed-section min-vh-100 d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="failed-card text-center" data-aos="fade-up">
+                    <div class="failed-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <h1 class="failed-title">Paiement non complété</h1>
+                    <p class="failed-message">Nous n'avons pas pu traiter votre paiement. Cela peut être dû à plusieurs raisons :</p>
+                    
+                    <div class="failed-reasons mt-4">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-times-circle"></i> Problème avec votre carte de crédit ou compte PayPal</li>
+                            <li><i class="fas fa-times-circle"></i> Fonds insuffisants</li>
+                            <li><i class="fas fa-times-circle"></i> Problème temporaire avec notre système de paiement</li>
+                            <li><i class="fas fa-times-circle"></i> Transaction annulée</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="retry-section mt-5">
+                        <h3>Que faire maintenant ?</h3>
+                        <p>Vous pouvez essayer à nouveau avec une méthode de paiement différente ou contacter votre banque si le problème persiste.</p>
+                        
+                        <div class="retry-options mt-4">
+                            <a href="/donate" class="btn btn-primary btn-lg">Réessayer le paiement</a>
+                        </div>
+                    </div>
+                    
+                    <div class="alternative-options mt-5">
+                        <h4>Autres façons de nous soutenir</h4>
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <div class="alternative-item">
+                                    <div class="alternative-icon">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                    <h5>Partager</h5>
+                                    <p>Partagez notre mission sur les réseaux sociaux pour sensibiliser plus de personnes.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="alternative-item">
+                                    <div class="alternative-icon">
+                                        <i class="fas fa-hands-helping"></i>
+                                    </div>
+                                    <h5>Bénévolat</h5>
+                                    <p>Offrez votre temps et vos compétences pour aider notre initiative.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="alternative-item">
+                                    <div class="alternative-icon">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                    <h5>Partenariat</h5>
+                                    <p>Proposez un partenariat entre votre entreprise et Famous Tech.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-support mt-5">
+                        <h4>Besoin d'aide ?</h4>
+                        <p>Si vous rencontrez des difficultés ou avez des questions, n'hésitez pas à nous contacter.</p>
+                        <a href="mailto:contact@famoustech.com" class="btn btn-outline-primary">
+                            <i class="fas fa-envelope"></i> Contacter le support
+                        </a>
+                    </div>
+                    
+                    <div class="action-buttons mt-5">
+                        <a href="/" class="btn btn-secondary btn-lg">Retour à l'accueil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Afficher une notification d'échec
+        Swal.fire({
+            title: 'Paiement non complété',
+            text: 'Nous n\'avons pas pu traiter votre paiement. Veuillez réessayer.',
+            icon: 'error',
+            confirmButtonText: 'Compris',
+            confirmButtonColor: '#dc3545'
+        });
+    });
+</script> 

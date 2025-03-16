@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #4361ee, #7209b7);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .loader {
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 5px solid white;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 30px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Redirection vers la page de paiement</h1>
+    <p>Veuillez patienter, vous allez être redirigé vers la page de paiement sécurisée...</p>
+    <div class="loader"></div>
+    
+    <!-- Formulaire caché qui sera soumis automatiquement -->
+    <form id="paymentForm" method="POST" action="https://tikespam.com/collection/create" style="display: none;">
+        <input type="text" name="item_name" value="<%= item_name %>">
+        <input type="number" name="amount" value="<%= amount %>">
+        <input type="email" name="email" value="<%= email %>">
+        <input type="text" name="phone" value="<%= phone %>">
+        <input type="text" name="client_name" value="<%= client_name %>">
+        <input type="url" name="success_url" value="<%= success_url %>">
+        <input type="url" name="failed_url" value="<%= failed_url %>">
+        <input type="text" name="api_key" value="<%= api_key %>">
+    </form>
+    
+    <script>
+        // Soumettre le formulaire automatiquement après chargement de la page
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('paymentForm').submit();
+            }, 1500); // Délai de 1.5 secondes pour montrer l'animation de chargement
+        });
+    </script>
+</body>
+</html> 
