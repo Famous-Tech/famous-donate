@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Clé API TikesPam (à remplacer par votre clé réelle)
+// Clé API TikesPam
 const TIKESPAM_API_KEY = process.env.TIKESPAM_API_KEY || '';
 
 // Configuration des vues
